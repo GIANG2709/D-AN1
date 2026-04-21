@@ -1,0 +1,56 @@
+import datetime
+from datetime import datetime
+
+print("========== BÀI 1 ==========")
+
+now = datetime.now()
+
+print("Năm hiện tại:", now.year)
+print("Tháng hiện tại bằng chữ:", now.strftime("%B"))
+print("Tuần hiện tại trong năm:", now.strftime("%U"))
+print("Tuần hiện tại trong tháng:", (now.day - 1) // 7 + 1)
+print("Ngày thứ mấy trong năm:", now.strftime("%j"))
+print("Ngày hiện tại:", now.day)
+print("Thứ của ngày:", now.strftime("%A"))
+print("Giờ phút giây:", now.strftime("%H:%M:%S"))
+
+
+print("\n========== BÀI 2 ==========")
+
+print("Nhập ngày thứ nhất")
+d1 = int(input("Ngày: "))
+m1 = int(input("Tháng: "))
+y1 = int(input("Năm: "))
+
+print("Nhập ngày thứ hai")
+d2 = int(input("Ngày: "))
+m2 = int(input("Tháng: "))
+y2 = int(input("Năm: "))
+
+date1 = datetime(y1, m1, d1)
+date2 = datetime(y2, m2, d2)
+
+songay = abs((date2 - date1).days)
+
+print("Số ngày cách nhau:", songay)
+
+
+print("\n========== BÀI 3 ==========")
+
+S = input("Nhập chuỗi ngày (ví dụ: Sep 18 2019 2:43PM): ")
+
+date_object = datetime.strptime(S, "%b %d %Y %I:%M%p")
+
+print("Sau khi chuyển:", date_object)
+
+
+print("\n========== BÀI 4 ==========")
+
+import datetime
+
+now = datetime.datetime.now()
+
+new_time = now + datetime.timedelta(seconds=5)
+
+print("Thời gian hiện tại:", now)
+print("Sau khi thêm 5 giây:", new_time)
